@@ -95,10 +95,10 @@ if (event.keyCode == 73) {return false;}
             <h3 class="my-4"><b>Simples TÔNICO de 4 ingredientes que acabou com meu MAU HÁLITO para sempre!</b></h3>
 
             <!-- VSL -->
-            <div id="vid_632bd9113da239000a8f1bbd" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_632bd9113da239000a8f1bbd" src="https://images.converteai.net/010fc7d5-48b3-4ab2-8c45-63f4b1103158/players/632bd9113da239000a8f1bbd/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_632bd9113da239000a8f1bbd" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_632bd9113da239000a8f1bbd">var s=document.createElement("script");s.src="https://scripts.converteai.net/010fc7d5-48b3-4ab2-8c45-63f4b1103158/players/632bd9113da239000a8f1bbd/player.js",s.async=!0,document.head.appendChild(s);</script>
+            <div id="vid_636d50440539470009a33a40" style="position:relative;width:100%;padding: 56.25% 0 0;"><img id="thumb_636d50440539470009a33a40" src="https://images.converteai.net/010fc7d5-48b3-4ab2-8c45-63f4b1103158/players/636d50440539470009a33a40/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"><div id="backdrop_636d50440539470009a33a40" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div></div><script type="text/javascript" id="scr_636d50440539470009a33a40">var s=document.createElement("script");s.src="https://scripts.converteai.net/010fc7d5-48b3-4ab2-8c45-63f4b1103158/players/636d50440539470009a33a40/player.js",s.async=!0,document.head.appendChild(s);</script>
             <!-- Botão 1 -->
             <div id="cta1" class="mt-4 d-none">
-              <a href="https://pay.kiwify.com.br/mbl1pHA" class="a-btn" style="text-decoration: none;">
+              <a href="https://checkout.mycheckout.com.br/checkout/63753770e0b8cc5ba854d7bb" class="a-btn" style="text-decoration: none;">
                 <span class="span-btn">QUERO ME LIVRAR DO MAU HÁLITO!</span>
                 <span class="span-btn2">(atenção: vagas limitadas)</span>
               </a>
@@ -475,7 +475,7 @@ if (event.keyCode == 73) {return false;}
             </div>
             <!-- Botão 2 -->
             <div id="cta2" class="mt-4 d-none">
-              <a href="https://pay.kiwify.com.br/mbl1pHA" class="a-btn" style="text-decoration: none;">
+              <a href="https://checkout.mycheckout.com.br/checkout/63753770e0b8cc5ba854d7bb" class="a-btn" style="text-decoration: none;">
                 <span class="span-btn">QUERO OBTER ACESSO!</span>
                 <span class="span-btn2">(atenção: vagas limitadas)</span>
               </a>
@@ -499,26 +499,22 @@ if (event.keyCode == 73) {return false;}
     <script src="./assets/js/com.js"></script>
   
 <script>
-    let prefix = ["https://pay.kiwify.com.br"];
-
-function getParams() {
-    let t = "",
-        e = window.top.location.href,
-        r = new URL(e);
-    if (null != r) {
-        let a = r.searchParams.get("utm_source"),
-            n = r.searchParams.get("utm_medium"),
-            o = r.searchParams.get("utm_campaign"),
-            m = r.searchParams.get("utm_term"),
-            c = r.searchParams.get("utm_content"); - 1 !== e.indexOf("?") && (t = `&sck=${a}|${n}|${o}|${m}|${c}`), console.log(t)
-    }
-    return t
-}! function() {
-    var t = new URLSearchParams(window.location.search);
-    t.toString() && document.querySelectorAll("a").forEach(function(e) {
-        for (let r = 0; r < prefix.length; r++) - 1 !== e.href.indexOf(prefix[r]) && (-1 === e.href.indexOf("?") ? e.href += "?" + t.toString() + getParams() : e.href += "&" + t.toString() + getParams())
-    })
-}(); </script>
+(function() {
+     const utmParamQueryString = new URLSearchParams(window.location.search);
+     if (utmParamQueryString.toString()) {
+          var navLinks = document.querySelectorAll('a');
+          navLinks.forEach(function(item) {
+               if (item.href.indexOf('checkout.mycheckout.com.br') !== -1) {
+                    if (item.href.indexOf('?') === -1) {
+                         item.href += '?' + utmParamQueryString.toString();
+                    } else {
+                         item.href += '&' + utmParamQueryString.toString();
+                    }
+               }
+          });
+     }
+})();
+</script>
 
   </body>
 </html>
